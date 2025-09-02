@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = "secretkeyofmywebsitegngtutors"
+app.secret_key = "secretkeyofmywebsite"
 
 # Configure SQL Alchemy to work with Flask
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.db"
@@ -78,4 +78,5 @@ def logout():
 if __name__ in "__main__":
     with app.app_context():
         db.create_all()
+
     app.run(debug=True)
